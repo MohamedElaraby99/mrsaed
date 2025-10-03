@@ -945,7 +945,7 @@ export default function HomePage() {
                           </div>
                           <p className="text-sm text-gray-600 mb-3"> الكيمياء </p>
                           <div className="flex justify-between items-center">
-                            <span className="text-sm text-orange-600 font-medium">30% مكتمل</span>
+                            <span className="text-sm text-primary font-medium">30% مكتمل</span>
                             <button className="bg-orange-600 text-white px-4 py-1 rounded-full text-xs">متابعة</button>
                           </div>
                         </div>
@@ -953,7 +953,7 @@ export default function HomePage() {
                         <div className="bg-gradient-to-r from-green-50 to-orange-50 rounded-xl p-4">
                           <div className="flex justify-between items-start mb-2">
                             <h4 className="font-semibold text-gray-900">علوم متكاملة </h4>
-                            <span className="text-xs bg-orange-100 text-orange-800 px-2 py-1 rounded-full">شائع</span>
+                            <span className="text-xs bg-primary text-primary-light px-2 py-1 rounded-full">شائع</span>
                           </div>
                           <p className="text-sm text-gray-600 mb-3">  علوم متكاملة </p>
                           <div className="flex justify-between items-center">
@@ -1061,8 +1061,8 @@ export default function HomePage() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900 dark:text-white">واتساب</h3>
-                  <a href="https://wa.me/+201555559887" className="text-green-600 dark:text-green-400 hover:underline">
-                  +201555559887
+                  <a href="https://wa.me/+201066690919" className="text-green-600 dark:text-green-400 hover:underline">
+                  +201066690919
                   </a>
                 </div>
               </div>
@@ -1075,7 +1075,7 @@ export default function HomePage() {
               </h3>
               <div className="flex flex-wrap justify-center gap-6 max-w-md mx-auto">
                 <a
-                  href="https://www.facebook.com/share/16Vq29HcXH/"
+                  href="https://www.facebook.com/share/14Fwta1VFiW/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group flex flex-col items-center p-4 bg-gray-50 dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:text-primary hover:scale-105"
@@ -1089,7 +1089,7 @@ export default function HomePage() {
                   </span>
                 </a>
                 <a
-                  href="https://youtube.com/@_aymanmrsaed9685?si=X_KXTLDEsxNG5tAs"
+                  href="https://youtube.com/@saeedmohamedsaeed-h2u?si=lyH-mgGD5aHYZ3-w"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group flex flex-col items-center p-4 bg-gray-50 dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:text-primary hover:scale-105"
@@ -1103,7 +1103,7 @@ export default function HomePage() {
                   </span>
                 </a>
                 <a
-                  href="https://wa.me/01555559887"
+                  href="https://wa.me/01066690919"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group flex flex-col items-center p-4 bg-gray-50 dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:text-green-500 hover:scale-105"
@@ -1204,7 +1204,7 @@ export default function HomePage() {
 
       {/* Floating WhatsApp Button */}
       <a
-        href="https://wa.me/+201555559887"
+        href="https://wa.me/+201066690919"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed left-8 bottom-8 z-50 p-4 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 group animate-bounce"

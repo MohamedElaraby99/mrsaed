@@ -82,13 +82,13 @@ const CourseNotifications = () => {
   const getNotificationIcon = (type) => {
     switch (type) {
       case 'new_video':
-        return <FaVideo className="text-orange-500" />;
+        return <FaVideo className="text-primary" />;
       case 'new_lesson':
         return <FaBook className="text-green-500" />;
       case 'new_material':
-        return <FaFileAlt className="text-purple-500" />;
+        return <FaFileAlt className="text-primary-light" />;
       case 'course_update':
-        return <FaExclamationCircle className="text-orange-500" />;
+        return <FaExclamationCircle className="text-primary" />;
       default:
         return <FaBell className="text-gray-500" />;
     }
@@ -131,9 +131,9 @@ const CourseNotifications = () => {
       {/* Notification Bell Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="relative p-2.5 md:p-3 rounded-xl bg-gradient-to-r from-orange-100 to-orange-200 dark:from-orange-800 dark:to-orange-700 hover:from-orange-200 hover:to-orange-300 dark:hover:from-orange-700 dark:hover:to-orange-600 transition-all duration-300 shadow-lg hover:shadow-xl border border-orange-200 dark:border-orange-600"
+        className="relative p-2.5 md:p-3 rounded-xl bg-gradient-to-r from-primary/10 to-primary/20 dark:from-primary-dark/80 dark:to-primary/70 hover:from-primary/20 hover:to-primary/30 dark:hover:from-primary/70 dark:hover:to-primary-light/60 transition-all duration-300 shadow-lg hover:shadow-xl border border-primary/20 dark:border-primary-dark/60"
       >
-        <FaBell className="w-4 h-4 md:w-5 md:h-5 text-orange-700 dark:text-orange-300" />
+        <FaBell className="w-4 h-4 md:w-5 md:h-5 text-primary dark:text-primary-light" />
         
         {/* Unread Count Badge */}
         {unreadCount > 0 && (
@@ -155,7 +155,7 @@ const CourseNotifications = () => {
               {unreadCount > 0 && (
                 <button
                   onClick={markAllAsRead}
-                  className="text-xs text-orange-600 dark:text-orange-400 hover:underline"
+                  className="text-xs text-primary dark:text-primary-light hover:underline"
                 >
                   تحديد الكل كمقروء
                 </button>
@@ -184,7 +184,7 @@ const CourseNotifications = () => {
                 <div
                   key={notification._id}
                   className={`p-4 border-b border-gray-100 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer transition-colors ${
-                    !notification.isRead ? 'bg-orange-50 dark:bg-orange-900/20' : ''
+                    !notification.isRead ? 'bg-primary/10 dark:bg-primary-dark/20' : ''
                   }`}
                   onClick={async () => {
                     if (!notification.isRead) {
@@ -233,11 +233,11 @@ const CourseNotifications = () => {
                       
                       <div className="flex items-center justify-between mt-2">
                         <div className="flex items-center gap-2">
-                          <span className="text-xs text-orange-600 dark:text-orange-400 font-medium">
+                          <span className="text-xs text-primary dark:text-primary-light font-medium">
                             {notification.courseName}
                           </span>
                           {notification.actionText && (
-                            <span className="text-xs bg-orange-100 dark:bg-orange-800 text-orange-700 dark:text-orange-200 px-2 py-1 rounded">
+                            <span className="text-xs bg-primary/20 dark:bg-primary-dark/30 text-primary dark:text-primary-light px-2 py-1 rounded">
                               {notification.actionText}
                             </span>
                           )}
@@ -249,7 +249,7 @@ const CourseNotifications = () => {
                     </div>
                     {!notification.isRead && (
                       <div className="flex-shrink-0">
-                        <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
+                        <div className="w-2 h-2 bg-primary rounded-full"></div>
                       </div>
                     )}
                   </div>
@@ -267,7 +267,7 @@ const CourseNotifications = () => {
                   // Navigate to courses page or notifications page
                   window.location.href = '/courses';
                 }}
-                className="text-sm text-orange-600 dark:text-orange-400 hover:underline"
+                className="text-sm text-primary dark:text-primary-light hover:underline"
               >
                 عرض جميع الكورسات
               </button>

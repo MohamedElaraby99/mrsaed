@@ -64,7 +64,7 @@ export default function Contact() {
 
   const contactInfo = {
     phone: "01080808667",
-    whatsapp: "01555559887",
+    whatsapp: "01066690919",
     vodafoneCash: "01080808667",
     email: "softwarefikra@gmail.com",
     support: "softwarefikra@gmail.com",
@@ -74,8 +74,8 @@ export default function Contact() {
   };
 
   const socialMedia = [
-    { name: "Facebook", icon: FaFacebook, url: "https://www.facebook.com/share/16Vq29HcXH/", color: "hover:text-orange-600" },
-    { name: "YouTube", icon: FaYoutube, url: "https://youtube.com/@_aymanmrsaed9685?si=X_KXTLDEsxNG5tAs", color: "hover:text-orange-600" },
+    { name: "Facebook", icon: FaFacebook, url: "https://www.facebook.com/share/14Fwta1VFiW/", color: "hover:text-orange-600" },
+    { name: "YouTube", icon: FaYoutube, url: "https://youtube.com/@saeedmohamedsaeed-h2u?si=lyH-mgGD5aHYZ3-w", color: "hover:text-orange-600" },
     { name: "WhatsApp", icon: FaWhatsapp, url: `https://wa.me/${contactInfo.whatsapp.replace('+', '')}`, color: "hover:text-green-500" }
   ];
 

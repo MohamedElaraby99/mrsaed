@@ -127,8 +127,9 @@ export default function Navbar() {
                  alt="منصة  mrsaed" 
                  className="w-16 h-16 md:w-20 md:h-20 object-contain group-hover:scale-110 transition-transform duration-300 dark:drop-shadow-[0_0_15px_rgba(255,255,255,0.3)] dark:group-hover:drop-shadow-[0_0_20px_rgba(255,255,255,0.5)]"
                />
+                
             </div>
-          
+        
           </Link>
 
           {/* Right Side */}
@@ -180,7 +181,7 @@ export default function Navbar() {
             )}
 
             {/* Menu Button - Visible on all devices */}
-            <div className="flex items-center space-x-3">  
+            <div className="flex items-center space-x-3 ">  
               {/* Course Notifications - ONLY show when user is logged in */}
               {user?.fullName && <CourseNotifications />}
               

@@ -445,7 +445,7 @@ export default function Signup() {
 
   return (
     <Layout>
-      <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-orange-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8" dir="rtl">
+      <div className="min-h-screen bg-gradient-to-br from-primary/10 via-white to-primary/10 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8" dir="rtl">
         <div className="max-w-md w-full space-y-8">
           {/* Enhanced Header with Logo */}
           <div className="text-center">
@@ -453,10 +453,10 @@ export default function Signup() {
             <div className="flex justify-center items-center mb-8">
               <div className="relative">
                 {/* Glowing Background Effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-orange-400 via-orange-500 to-indigo-600 rounded-full blur-2xl opacity-30 animate-pulse"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary-light to-primary-dark rounded-full blur-2xl opacity-30 animate-pulse"></div>
                 
                 {/* Logo Container */}
-                <div className="relative bg-white dark:bg-gray-800 rounded-full p-4 shadow-2xl border-4 border-orange-200 dark:border-orange-700 transform hover:scale-110 transition-all duration-500">
+                <div className="relative bg-white dark:bg-gray-800 rounded-full p-4 shadow-2xl border-4 border-primary/30 dark:border-primary-dark/50 transform hover:scale-110 transition-all duration-500">
                   <img 
                     src={logo} 
                     alt="منصة  mrsaed Logo" 
@@ -465,12 +465,12 @@ export default function Signup() {
                 </div>
                 
                 {/* Floating Decorative Elements */}
-                <div className="absolute -top-2 -right-2 w-4 h-4 bg-orange-400 rounded-full animate-bounce z-10 shadow-lg"></div>
-                <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-pink-400 rounded-full animate-pulse z-10 shadow-lg"></div>
+                <div className="absolute -top-2 -right-2 w-4 h-4 bg-primary-light rounded-full animate-bounce z-10 shadow-lg"></div>
+                <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-primary-light rounded-full animate-pulse z-10 shadow-lg"></div>
               </div>
             </div>
             
-            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-3 bg-gradient-to-r from-orange-600 to-orange-600 bg-clip-text text-transparent">
+            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-3 bg-gradient-to-r from-primary to-primary bg-clip-text text-transparent">
               انضم إلى منصتنا التعليمية
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300">
@@ -479,7 +479,7 @@ export default function Signup() {
           </div>
 
           {/* Enhanced Modern Form */}
-          <div className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-3xl shadow-2xl p-8 border border-orange-200/50 dark:border-orange-700/50 transform hover:scale-[1.02] transition-all duration-500">
+          <div className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-3xl shadow-2xl p-8 border border-primary/20 dark:border-primary-dark/30 transform hover:scale-[1.02] transition-all duration-500">
             <form onSubmit={createNewAccount} className="space-y-6">
               {/* Full Name Field */}
               <div className="group">
@@ -488,7 +488,7 @@ export default function Signup() {
                 </label>
                 <div className="relative">
                   <div className="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none">
-                    <FaUser className="h-5 w-5 text-orange-500 group-focus-within:text-orange-600 transition-colors duration-200" />
+                    <FaUser className="h-5 w-5 text-primary group-focus-within:text-primary-dark transition-colors duration-200" />
                   </div>
                   <input
                     id="fullName"
@@ -498,7 +498,7 @@ export default function Signup() {
                     className={`block w-full pr-12 pl-4 py-4 border-2 rounded-xl bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-4 transition-all duration-300 text-right shadow-sm hover:shadow-md ${
                       fieldErrors.fullName 
                         ? 'border-red-500 focus:ring-red-500/20 focus:border-red-500' 
-                        : 'border-gray-200 dark:border-gray-600 focus:ring-orange-500/20 focus:border-orange-500'
+                        : 'border-gray-200 dark:border-gray-600 focus:ring-primary/20 focus:border-primary'
                     }`}
                     placeholder="أدخل اسمك الكامل"
                     value={signupData.fullName}
@@ -521,7 +521,7 @@ export default function Signup() {
                   </label>
                   <div className="relative">
                     <div className="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none">
-                      <FaPhone className="h-5 w-5 text-orange-500 group-focus-within:text-orange-600 transition-colors duration-200" />
+                      <FaPhone className="h-5 w-5 text-primary group-focus-within:text-primary-dark transition-colors duration-200" />
                     </div>
                     <input
                       id="phoneNumber"
@@ -531,7 +531,7 @@ export default function Signup() {
                       className={`block w-full pr-12 pl-4 py-4 border-2 rounded-xl bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-4 transition-all duration-300 text-right shadow-sm hover:shadow-md ${
                         fieldErrors.phoneNumber 
                           ? 'border-red-500 focus:ring-red-500/20 focus:border-red-500' 
-                          : 'border-gray-200 dark:border-gray-600 focus:ring-orange-500/20 focus:border-orange-500'
+                          : 'border-gray-200 dark:border-gray-600 focus:ring-primary/20 focus:border-primary'
                       }`}
                       placeholder="اكتب رقم تليفونك"
                       value={signupData.phoneNumber}
@@ -558,7 +558,7 @@ export default function Signup() {
                 </label>
                 <div className="relative">
                   <div className="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none">
-                    <FaEnvelope className="h-5 w-5 text-orange-500 group-focus-within:text-orange-600 transition-colors duration-200" />
+                    <FaEnvelope className="h-5 w-5 text-primary group-focus-within:text-primary-dark transition-colors duration-200" />
                   </div>
                   <input
                     id="email"
@@ -568,7 +568,7 @@ export default function Signup() {
                     className={`block w-full pr-12 pl-4 py-4 border-2 rounded-xl bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-4 transition-all duration-300 text-right shadow-sm hover:shadow-md ${
                       fieldErrors.email 
                         ? 'border-red-500 focus:ring-red-500/20 focus:border-red-500' 
-                        : 'border-gray-200 dark:border-gray-600 focus:ring-orange-500/20 focus:border-orange-500'
+                        : 'border-gray-200 dark:border-gray-600 focus:ring-primary/20 focus:border-primary'
                     }`}
                     placeholder={isAdminRegistration ? "أدخل بريدك الإلكتروني" : "أدخل بريدك الإلكتروني (اختياري)"}
                     value={signupData.email}
@@ -595,7 +595,7 @@ export default function Signup() {
                 </label>
                 <div className="relative">
                   <div className="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none">
-                    <FaLock className="h-5 w-5 text-orange-500 group-focus-within:text-orange-600 transition-colors duration-200" />
+                    <FaLock className="h-5 w-5 text-primary group-focus-within:text-primary-dark transition-colors duration-200" />
                   </div>
                   <input
                     id="password"
@@ -605,7 +605,7 @@ export default function Signup() {
                     className={`block w-full pr-12 pl-12 py-4 border-2 rounded-xl bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-4 transition-all duration-300 text-right shadow-sm hover:shadow-md ${
                       fieldErrors.password 
                         ? 'border-red-500 focus:ring-red-500/20 focus:border-red-500' 
-                        : 'border-gray-200 dark:border-gray-600 focus:ring-orange-500/20 focus:border-orange-500'
+                        : 'border-gray-200 dark:border-gray-600 focus:ring-primary/20 focus:border-primary'
                     }`}
                     placeholder="أنشئ كلمة مرور قوية"
                     value={signupData.password}
@@ -639,7 +639,7 @@ export default function Signup() {
                   </label>
                   <div className="relative">
                     <div className="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none">
-                      <FaPhone className="h-5 w-5 text-orange-500 group-focus-within:text-orange-600 transition-colors duration-200" />
+                      <FaPhone className="h-5 w-5 text-primary group-focus-within:text-primary-dark transition-colors duration-200" />
                     </div>
                     <input
                       id="fatherPhoneNumber"
@@ -649,7 +649,7 @@ export default function Signup() {
                       className={`block w-full pr-12 pl-4 py-4 border-2 rounded-xl bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-4 transition-all duration-300 text-right shadow-sm hover:shadow-md ${
                         fieldErrors.fatherPhoneNumber 
                           ? 'border-red-500 focus:ring-red-500/20 focus:border-red-500' 
-                          : 'border-gray-200 dark:border-gray-600 focus:ring-orange-500/20 focus:border-orange-500'
+                          : 'border-gray-200 dark:border-gray-600 focus:ring-primary/20 focus:border-primary'
                       }`}
                       placeholder="اكتب رقم تليفون ولي أمرك"
                       value={signupData.fatherPhoneNumber}
@@ -673,7 +673,7 @@ export default function Signup() {
                   </label>
                   <div className="relative">
                     <div className="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none">
-                      <FaMapMarkerAlt className="h-5 w-5 text-orange-500 group-focus-within:text-orange-600 transition-colors duration-200" />
+                      <FaMapMarkerAlt className="h-5 w-5 text-primary group-focus-within:text-primary-dark transition-colors duration-200" />
                     </div>
                     <select
                       id="governorate"
@@ -682,7 +682,7 @@ export default function Signup() {
                       className={`block w-full pr-12 pl-4 py-4 border-2 rounded-xl bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-4 transition-all duration-300 text-right shadow-sm hover:shadow-md ${
                         fieldErrors.governorate 
                           ? 'border-red-500 focus:ring-red-500/20 focus:border-red-500' 
-                          : 'border-gray-200 dark:border-gray-600 focus:ring-orange-500/20 focus:border-orange-500'
+                          : 'border-gray-200 dark:border-gray-600 focus:ring-primary/20 focus:border-primary'
                       }`}
                       value={signupData.governorate}
                       onChange={handleUserInput}
@@ -712,7 +712,7 @@ export default function Signup() {
                   </label>
                   <div className="relative">
                     <div className="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none">
-                      <FaBook className="h-5 w-5 text-orange-500 group-focus-within:text-orange-600 transition-colors duration-200" />
+                      <FaBook className="h-5 w-5 text-primary group-focus-within:text-primary-dark transition-colors duration-200" />
                     </div>
                     <select
                       id="stage"
@@ -721,7 +721,7 @@ export default function Signup() {
                       className={`block w-full pr-12 pl-4 py-4 border-2 rounded-xl bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-4 transition-all duration-300 text-right shadow-sm hover:shadow-md ${
                         fieldErrors.stage 
                           ? 'border-red-500 focus:ring-red-500/20 focus:border-red-500' 
-                          : 'border-gray-200 dark:border-gray-600 focus:ring-orange-500/20 focus:border-orange-500'
+                          : 'border-gray-200 dark:border-gray-600 focus:ring-primary/20 focus:border-primary'
                       }`}
                       value={signupData.stage}
                       onChange={handleUserInput}
@@ -751,7 +751,7 @@ export default function Signup() {
                   </label>
                   <div className="relative">
                     <div className="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none">
-                      <FaUser className="h-5 w-5 text-orange-500 group-focus-within:text-orange-600 transition-colors duration-200" />
+                      <FaUser className="h-5 w-5 text-primary group-focus-within:text-primary-dark transition-colors duration-200" />
                     </div>
                     <input
                       id="age"
@@ -763,7 +763,7 @@ export default function Signup() {
                       className={`block w-full pr-12 pl-4 py-4 border-2 rounded-xl bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-4 transition-all duration-300 text-right shadow-sm hover:shadow-md ${
                         fieldErrors.age 
                           ? 'border-red-500 focus:ring-red-500/20 focus:border-red-500' 
-                          : 'border-gray-200 dark:border-gray-600 focus:ring-orange-500/20 focus:border-orange-500'
+                          : 'border-gray-200 dark:border-gray-600 focus:ring-primary/20 focus:border-primary'
                       }`}
                       placeholder="أدخل عمرك"
                       value={signupData.age}
@@ -786,7 +786,7 @@ export default function Signup() {
                 </label>
                 <div className="flex items-center space-x-reverse space-x-4">
                   <div className="relative">
-                    <div className="w-20 h-20 rounded-full bg-gradient-to-r from-orange-100 to-orange-100 dark:from-orange-900/20 dark:to-orange-900/20 flex items-center justify-center border-2 border-gray-200 dark:border-gray-600 overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div className="w-20 h-20 rounded-full bg-gradient-to-r from-primary/20 to-primary/20 dark:from-primary-dark/20 dark:to-primary-dark/20 flex items-center justify-center border-2 border-gray-200 dark:border-gray-600 overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
                       {previewImage ? (
                         <img 
                           src={previewImage} 
@@ -805,8 +805,8 @@ export default function Signup() {
                   </div>
                   <div className="flex-1">
                     <label htmlFor="image_uploads" className="cursor-pointer">
-                      <div className="flex items-center justify-center px-6 py-4 border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-xl hover:border-orange-400 dark:hover:border-orange-400 transition-all duration-300 hover:shadow-md bg-gray-50 dark:bg-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600">
-                        <FaUpload className="w-5 h-5 text-orange-500 ml-2" />
+                      <div className="flex items-center justify-center px-6 py-4 border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-xl hover:border-primary dark:hover:border-primary transition-all duration-300 hover:shadow-md bg-gray-50 dark:bg-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600">
+                        <FaUpload className="w-5 h-5 text-primary ml-2" />
                         <span className="text-sm font-medium text-gray-600 dark:text-gray-300">
                           {previewImage ? "تغيير الصورة" : "رفع صورة"}
                         </span>
@@ -834,10 +834,10 @@ export default function Signup() {
               <button
                 type="submit"
                 disabled={isLoading || !isCaptchaVerified}
-                className="group relative w-full flex justify-center py-4 px-6 border border-transparent text-lg font-semibold rounded-xl text-white bg-gradient-to-r from-orange-600 via-orange-600 to-indigo-600 hover:from-orange-700 hover:via-orange-700 hover:to-indigo-700 focus:outline-none focus:ring-4 focus:ring-orange-500/30 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 transform hover:scale-[1.02] hover:shadow-xl shadow-lg overflow-hidden"
+                className="group relative w-full flex justify-center py-4 px-6 border border-transparent text-lg font-semibold rounded-xl text-white bg-gradient-to-r from-primary via-primary-light to-primary-dark hover:from-primary-dark hover:via-primary hover:to-primary-dark focus:outline-none focus:ring-4 focus:ring-primary/30 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 transform hover:scale-[1.02] hover:shadow-xl shadow-lg overflow-hidden"
               >
                 {/* Button Background Glow */}
-                <div className="absolute inset-0 bg-gradient-to-r from-orange-600 via-orange-500 to-orange-600 rounded-xl blur opacity-75 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary-light to-primary rounded-xl blur opacity-75 group-hover:opacity-100 transition-opacity duration-300"></div>
                 
                 <span className="relative flex items-center gap-3">
                   {isLoading ? (
@@ -854,7 +854,7 @@ export default function Signup() {
                 </span>
                 
                 {/* Creative Button Border Animation */}
-                <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-orange-400 via-orange-500 to-orange-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
+                <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-primary via-primary-light to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
               </button>
             </form>
 
@@ -876,7 +876,7 @@ export default function Signup() {
             <div className="mt-6 text-center">
               <Link
                 to="/login"
-                className="inline-flex items-center gap-2 font-semibold text-orange-600 dark:text-orange-400 hover:text-orange-700 dark:hover:text-orange-300 transition-all duration-200 hover:scale-105"
+                className="inline-flex items-center gap-2 font-semibold text-primary dark:text-primary-light hover:text-primary-dark dark:hover:text-primary transition-all duration-200 hover:scale-105"
               >
                 <span>ادخل على حسابك</span>
                 <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -889,18 +889,18 @@ export default function Signup() {
           {/* Enhanced Footer */}
           <div className="text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-full border border-gray-200 dark:border-gray-700">
-              <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></div>
+              <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
               <p className="text-sm text-gray-600 dark:text-gray-400 font-medium">
                 بإنشاء حساب، فإنك توافق على{" "}
-                <Link to="/terms" className="text-orange-600 dark:text-orange-400 hover:underline font-semibold">
+                <Link to="/terms" className="text-primary dark:text-primary-light hover:underline font-semibold">
                   شروط الخدمة
                 </Link>{" "}
                 و{" "}
-                <Link to="/privacy" className="text-orange-600 dark:text-orange-400 hover:underline font-semibold">
+                <Link to="/privacy" className="text-primary dark:text-primary-light hover:underline font-semibold">
                   سياسة الخصوصية
                 </Link>
               </p>
-              <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse animation-delay-1000"></div>
+              <div className="w-2 h-2 bg-primary rounded-full animate-pulse animation-delay-1000"></div>
             </div>
           </div>
         </div>
@@ -939,10 +939,10 @@ export default function Signup() {
             <div className="px-6 py-4 overflow-y-auto max-h-[60vh]">
               <div className="space-y-4">
                 {/* Important Notice */}
-                <div className="bg-orange-50 dark:bg-orange-900/20 border border-orange-200 dark:border-orange-700 rounded-lg p-4">
+                <div className="bg-primary/10 dark:bg-primary-dark/20 border border-primary/30 dark:border-primary-dark/50 rounded-lg p-4">
                   <div className="flex items-start gap-3">
-                    <FaExclamationTriangle className="text-orange-600 text-lg flex-shrink-0 mt-0.5" />
-                    <p className="text-orange-800 dark:text-orange-300 text-sm leading-relaxed text-right">
+                    <FaExclamationTriangle className="text-primary text-lg flex-shrink-0 mt-0.5" />
+                    <p className="text-primary dark:text-primary-light text-sm leading-relaxed text-right">
                       <strong>ملاحظة هامة:</strong> يرجى قراءة هذه الشروط بعناية. الموافقة عليها تعني التزامك الكامل بها.
                     </p>
                   </div>
@@ -1012,7 +1012,7 @@ export default function Signup() {
                     id="acceptTerms"
                     checked={termsAccepted}
                     onChange={(e) => setTermsAccepted(e.target.checked)}
-                    className="mt-1 w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 rounded focus:ring-orange-500 dark:focus:ring-orange-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                    className="mt-1 w-4 h-4 text-primary bg-gray-100 border-gray-300 rounded focus:ring-primary dark:focus:ring-primary dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                   />
                   <label htmlFor="acceptTerms" className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed cursor-pointer text-right">
                     أوافق على جميع الشروط والأحكام المذكورة أعلاه وأتعهد بالالتزام بها كاملة.
@@ -1033,7 +1033,7 @@ export default function Signup() {
                     disabled={!termsAccepted}
                     className={`flex-1 px-4 py-2.5 rounded-lg font-medium text-sm transition-all duration-200 flex items-center justify-center gap-2 ${
                       termsAccepted
-                        ? 'bg-gradient-to-r from-orange-500 to-orange-500 hover:from-orange-600 hover:to-orange-600 text-white shadow-sm hover:shadow-md'
+                        ? 'bg-gradient-to-r from-primary to-primary hover:from-primary-dark hover:to-primary-dark text-white shadow-sm hover:shadow-md'
                         : 'bg-gray-300 dark:bg-gray-600 text-gray-500 dark:text-gray-400 cursor-not-allowed'
                     }`}
                   >

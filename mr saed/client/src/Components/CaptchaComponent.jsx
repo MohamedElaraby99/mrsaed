@@ -148,7 +148,7 @@ const CaptchaComponent = ({ onVerified, onError, reset }) => {
         {/* CAPTCHA Question */}
         <div className="flex items-center justify-between mb-3">
           <div className="flex items-center gap-2">
-            <FaShieldAlt className="text-orange-500" />
+            <FaShieldAlt className="text-primary" />
             <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
               كود الأمان
             </span>
