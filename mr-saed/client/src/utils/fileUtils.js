@@ -21,7 +21,7 @@ const getBaseApiUrl = () => {
       window.location.hostname === '127.0.0.1' ||
       window.location.port === '5173' ||
       window.location.port === '5190') {
-    const devUrl = 'http://localhost:4020/api/v1';
+    const devUrl = 'http://localhost:4029/api/v1';
     console.log('✅ FileUtils using development API URL:', devUrl);
     return devUrl;
   }
