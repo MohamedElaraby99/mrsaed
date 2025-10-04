@@ -18,15 +18,7 @@ const createSuperAdmin = async () => {
   try {
     await connectToDb();
     
-    // Check if super admin already exists
-    const existingSuperAdmin = await User.findOne({ role: 'SUPER_ADMIN' });
-    if (existingSuperAdmin) {
-      console.log('⚠️ Super admin already exists:', existingSuperAdmin.email);
-      console.log('👑 Role:', existingSuperAdmin.role);
-      return;
-    }
-    
-    // Create super admin user
+    // Super admin data
     const superAdminData = {
       fullName: 'Super Administrator',
       email: 'admin@me.com',
@@ -42,6 +34,29 @@ const createSuperAdmin = async () => {
       ],
       isActive: true
     };
+    
+    // Check if super admin already exists
+    const existingSuperAdmin = await User.findOne({ role: 'SUPER_ADMIN' });
+    if (existingSuperAdmin) {
+      console.log('⚠️ Super admin already exists:', existingSuperAdmin.email);
+      console.log('👑 Role:', existingSuperAdmin.role);
+      console.log('🔄 Updating credentials...');
+      
+      // Update existing super admin with new credentials
+      existingSuperAdmin.email = superAdminData.email;
+      existingSuperAdmin.password = superAdminData.password;
+      await existingSuperAdmin.save();
+      
+      console.log('✅ Super admin credentials updated successfully!');
+      console.log('📧 New Email:', existingSuperAdmin.email);
+      console.log('🔐 New Password:', superAdminData.password);
+      console.log('👑 Role:', existingSuperAdmin.role);
+      console.log('🔑 Permissions:', existingSuperAdmin.adminPermissions);
+      console.log('\n💡 You can now login with these credentials');
+      console.log('🌐 Go to: http://localhost:5173/login');
+      
+      process.exit(0);
+    }
 
     const superAdmin = new User(superAdminData);
     await superAdmin.save();
