@@ -21,6 +21,7 @@ const createSuperAdmin = async () => {
     // Super admin data
     const superAdminData = {
       fullName: 'Super Administrator',
+      email: 'super@admin.com',
       phoneNumber: '01234567890',
       password: '123456789',
       role: 'SUPER_ADMIN',
@@ -44,11 +45,12 @@ const createSuperAdmin = async () => {
       
       // Update existing super admin with new credentials
       existingSuperAdmin.phoneNumber = superAdminData.phoneNumber;
-      existingSuperAdmin.email = undefined; // Remove email if it exists
+      existingSuperAdmin.email = superAdminData.email; // Keep email for SUPER_ADMIN role
       existingSuperAdmin.password = superAdminData.password;
       await existingSuperAdmin.save();
       
       console.log('✅ Super admin credentials updated successfully!');
+      console.log('📧 New Email:', existingSuperAdmin.email);
       console.log('📱 New Phone Number:', existingSuperAdmin.phoneNumber);
       console.log('🔐 New Password:', superAdminData.password);
       console.log('👑 Role:', existingSuperAdmin.role);
@@ -63,6 +65,7 @@ const createSuperAdmin = async () => {
     await superAdmin.save();
 
     console.log('✅ Super admin created successfully!');
+    console.log('📧 Email:', superAdmin.email);
     console.log('📱 Phone Number:', superAdmin.phoneNumber);
     console.log('🔐 Password:', superAdminData.password);
     console.log('👑 Role:', superAdmin.role);
