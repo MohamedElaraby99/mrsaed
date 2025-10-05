@@ -115,46 +115,49 @@ export default function Navbar() {
 
   return (
     <nav className="sticky top-0 z-50 bg-white/15 dark:bg-gray-900/15 backdrop-blur-3xl border-b border-gray-200/20 dark:border-gray-700/20 shadow-xl">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-0.5">
-                 <div className="flex justify-between items-center h-20 md:h-24">
+      <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8 py-0.5">
+                 <div className="flex justify-between items-center h-16 sm:h-20 md:h-24">
           {/* Modern Logo */}
-                     <Link to="/" onClick={handleLogoClick} className="flex items-center space-x-2 md:space-x-4 group logo-hover">
+                     <Link to="/" onClick={handleLogoClick} className="flex items-center space-x-1 sm:space-x-2 md:space-x-4 group logo-hover">
         
-            <div className="relative">
+            <div className="relative flex flex-col items-center">
               {/* Logo Image */}
                              <img 
                  src={logo} 
                  alt="منصة  mrsaed" 
-                 className="w-16 h-16 md:w-20 md:h-20 object-contain group-hover:scale-110 transition-transform duration-300 dark:drop-shadow-[0_0_15px_rgba(255,255,255,0.3)] dark:group-hover:drop-shadow-[0_0_20px_rgba(255,255,255,0.5)]"
+                 className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 object-contain group-hover:scale-110 transition-transform duration-300 dark:drop-shadow-[0_0_15px_rgba(255,255,255,0.3)] dark:group-hover:drop-shadow-[0_0_20px_rgba(255,255,255,0.5)]"
                />
-                
+              {/* Platform name under logo */}
+              <span className="text-[10px] sm:text-xs md:text-sm font-bold text-primary dark:text-primary-light mt-0.5 sm:mt-1 group-hover:text-primary-dark dark:group-hover:text-primary transition-colors duration-300 leading-tight">
+                منصة الأستاذ سعيد
+              </span>
             </div>
         
           </Link>
 
           {/* Right Side */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-1 sm:space-x-2 md:space-x-4">
             {/* Theme Toggle */}
             <button
               onClick={toggleDarkMode}
-              className="relative w-16 h-8 rounded-full bg-gradient-to-r from-primary-light to-primary hover:from-primary hover:to-primary-dark transition-all duration-300 shadow-lg hover:shadow-xl border border-primary-light dark:border-primary-dark overflow-hidden"
+              className="relative w-12 h-6 sm:w-14 sm:h-7 md:w-16 md:h-8 rounded-full bg-gradient-to-r from-primary-light to-primary hover:from-primary hover:to-primary-dark transition-all duration-300 shadow-lg hover:shadow-xl border border-primary-light dark:border-primary-dark overflow-hidden"
             >
               {/* Sun Icon (Left side) */}
-              <div className={`absolute left-1 top-1/2 transform -translate-y-1/2 transition-all duration-300 ${darkMode ? 'opacity-40' : 'opacity-100'}`}>
-                <FaSun className="w-4 h-4 text-white" />
+              <div className={`absolute left-0.5 sm:left-1 top-1/2 transform -translate-y-1/2 transition-all duration-300 ${darkMode ? 'opacity-40' : 'opacity-100'}`}>
+                <FaSun className="w-3 h-3 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4 text-white" />
               </div>
               
               {/* Moon Icon (Right side) */}
-              <div className={`absolute right-1 top-1/2 transform -translate-y-1/2 transition-all duration-300 ${darkMode ? 'opacity-100' : 'opacity-40'}`}>
-                <FaMoon className="w-4 h-4 text-white" />
+              <div className={`absolute right-0.5 sm:right-1 top-1/2 transform -translate-y-1/2 transition-all duration-300 ${darkMode ? 'opacity-100' : 'opacity-40'}`}>
+                <FaMoon className="w-3 h-3 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4 text-white" />
               </div>
               
               {/* Toggle Thumb */}
-              <div className={`absolute top-1 w-6 h-6 bg-white rounded-full border-2 border-primary-light transition-all duration-300 transform ${darkMode ? 'translate-x-8' : 'translate-x-1'}`}>
+              <div className={`absolute top-0.5 sm:top-1 w-5 h-5 sm:w-5.5 sm:h-5.5 md:w-6 md:h-6 bg-white rounded-full border-2 border-primary-light transition-all duration-300 transform ${darkMode ? 'translate-x-6 sm:translate-x-7 md:translate-x-8' : 'translate-x-0.5 sm:translate-x-1'}`}>
                 {darkMode ? (
-                  <FaMoon className="w-3 h-3 text-primary absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
+                  <FaMoon className="w-2 h-2 sm:w-2.5 sm:h-2.5 md:w-3 md:h-3 text-primary absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
                 ) : (
-                  <FaSun className="w-3 h-3 text-primary absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
+                  <FaSun className="w-2 h-2 sm:w-2.5 sm:h-2.5 md:w-3 md:h-3 text-primary absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
                 )}
               </div>
             </button>
@@ -163,25 +166,27 @@ export default function Navbar() {
             {!user?.fullName && (
               <Link
                 to="/signup"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-2xl text-sm font-semibold text-white bg-gradient-to-r from-primary via-primary-light to-primary hover:from-primary-dark hover:via-primary hover:to-primary-dark shadow-lg hover:shadow-xl transition-all duration-300 border border-primary-light/40"
+                className="inline-flex items-center gap-1 sm:gap-2 px-2 sm:px-3 md:px-4 py-1.5 sm:py-2 rounded-xl sm:rounded-2xl text-xs sm:text-sm font-semibold text-white bg-gradient-to-r from-primary via-primary-light to-primary hover:from-primary-dark hover:via-primary hover:to-primary-dark shadow-lg hover:shadow-xl transition-all duration-300 border border-primary-light/40"
               >
-                <FaPlus className="w-4 h-4" />
-                <span>سجل الآن</span>
+                <FaPlus className="w-3 h-3 sm:w-4 sm:h-4" />
+                <span className="hidden sm:inline">سجل الآن</span>
+                <span className="sm:hidden">سجل</span>
               </Link>
             )}
 
             {!user?.fullName && (
               <Link
                 to="/login"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-2xl text-sm font-semibold border-2 border-primary text-primary dark:text-primary-light hover:bg-gradient-to-r hover:from-primary hover:via-primary-light hover:to-primary hover:text-white transition-all duration-300 shadow-md hover:shadow-xl"
+                className="inline-flex items-center gap-1 sm:gap-2 px-2 sm:px-3 md:px-4 py-1.5 sm:py-2 rounded-xl sm:rounded-2xl text-xs sm:text-sm font-semibold border-2 border-primary text-primary dark:text-primary-light hover:bg-gradient-to-r hover:from-primary hover:via-primary-light hover:to-primary hover:text-white transition-all duration-300 shadow-md hover:shadow-xl"
               >
-                <FaUser className="w-4 h-4" />
-                <span>تسجيل الدخول</span>
+                <FaUser className="w-3 h-3 sm:w-4 sm:h-4" />
+                <span className="hidden sm:inline">تسجيل الدخول</span>
+                <span className="sm:hidden">دخول</span>
               </Link>
             )}
 
             {/* Menu Button - Visible on all devices */}
-            <div className="flex items-center space-x-3 ">  
+            <div className="flex items-center space-x-1 sm:space-x-2 md:space-x-3">  
               {/* Course Notifications - ONLY show when user is logged in */}
               {user?.fullName && <CourseNotifications />}
               
@@ -189,9 +194,9 @@ export default function Navbar() {
               {user?.fullName && (
                 <button
                   onClick={toggleMenu}
-                  className="p-2.5 md:p-3 rounded-xl bg-gradient-to-r from-primary/10 to-primary/20 dark:from-primary-dark/80 dark:to-primary/70 hover:from-primary/20 hover:to-primary/30 dark:hover:from-primary/70 dark:hover:to-primary-light/60 transition-all duration-300 shadow-lg hover:shadow-xl border border-primary/20 dark:border-primary-dark/60"
+                  className="p-1.5 sm:p-2 md:p-2.5 lg:p-3 rounded-lg sm:rounded-xl bg-gradient-to-r from-primary/10 to-primary/20 dark:from-primary-dark/80 dark:to-primary/70 hover:from-primary/20 hover:to-primary/30 dark:hover:from-primary/70 dark:hover:to-primary-light/60 transition-all duration-300 shadow-lg hover:shadow-xl border border-primary/20 dark:border-primary-dark/60"
                 >
-                  <FaBars className="w-4 h-4 md:w-5 md:h-5 text-primary dark:text-primary-light" />
+                  <FaBars className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 text-primary dark:text-primary-light" />
                 </button>
               )}
             </div>

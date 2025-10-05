@@ -126,14 +126,14 @@ export default function HomePage() {
   const handleAPKDownload = () => {
     // Create a download link for the APK file
     const link = document.createElement('a');
-    link.href = '/downloads/mrayman.apk'; // Update this path to your APK file location
-    link.download = 'mrayman.apk';
+    link.href = '/downloads/alsaed.apk'; // Update this path to your APK file location
+    link.download = 'alsaed.apk';
     link.target = '_blank';
     
     // Fallback for mobile browsers
     if (navigator.userAgent.toLowerCase().indexOf('android') > -1) {
       // For Android devices, open the download directly
-      window.open('/downloads/mrayman.apk', '_blank');
+      window.open('/downloads/alsaed.apk', '_blank');
     } else {
       // For other devices, trigger download
       document.body.appendChild(link);
@@ -777,7 +777,7 @@ export default function HomePage() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                           هل أنت مستعد لبدء رحلة التعلم؟
             </h2>
-            <p className="text-xl text-primary/90 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
               انضم إلى آلاف المتعلمين الذين نجحوا بالفعل في تغيير حياتهم المهنية من خلال موادنا التدريبية التي يقدمها خبراؤنا.
             </p>
           </div>

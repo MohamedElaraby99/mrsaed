@@ -71,12 +71,19 @@ const AnimatedHero = ({ onGetStarted }) => {
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
            {/* Left Side - Illustration (Top on mobile) */}
            <div className="relative order-1 lg:order-2">
-                <div className="relative">
+                <div className="relative flex flex-col items-center">
                       <img
                         src={logo}
                         alt="الاستاذ سعيد محمد سعيد - معلم الكيمياء"
                         className="w-100 h-100 object-contain relative z-10"
                       />
+                      {/* Platform name under logo */}
+                      <h2 className={`text-3xl lg:text-4xl font-bold mt-6 transition-colors duration-300 ${isDarkMode ? 'text-primary-light' : 'text-primary'}`}>
+                        منصة الأستاذ سعيد
+                      </h2>
+                      <p className={`text-lg lg:text-xl mt-2 transition-colors duration-300 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                        للكيمياء والعلوم المتكاملة
+                      </p>
                       {/* Subtle glow effect behind logo */}
                       <div className={`absolute inset-0 w-full h-full rounded-full blur-3xl transition-all duration-300 ${isDarkMode ? 'bg-primary/20' : 'bg-primary/30'}`}></div>
                 </div>
